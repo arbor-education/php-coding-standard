@@ -30,7 +30,7 @@ Repository with PHP coding standard ruleset for Arbor Education repositories.
 
    ```
    <?php
-   $rules = include __DIR__ . '/vendor/arbor-education/php-coding-standard/rules.php';
+   $rules = require __DIR__ . '/vendor/arbor-education/php-coding-standard/rules.php';
    
    $finder = PhpCsFixer\Finder::create()
        ->in(__DIR__)
