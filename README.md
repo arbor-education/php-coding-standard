@@ -18,6 +18,17 @@ Coding standards are defined and controlled using [PHP-CS-Fixer][php-cs-fixer] -
    ```bash
    $ composer require --dev arbor-education/php-coding-standard
    ```
+   
+   **Note that package is loaded from a VCS repository which must be specified in `composer.json`**
+   
+   ```json
+   "repositories": [
+       {
+           "type": "vcs",
+           "url":  "git@github.com:arbor-education/php-coding-standard.git"
+       }
+   ]
+   ```
 
 2. Add Composer scripts into your `composer.json`:
 
