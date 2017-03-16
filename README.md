@@ -41,7 +41,6 @@ Repository with PHP coding standard ruleset for Arbor Education repositories.
        ->setRules($rules)
        ->setFinder($finder)
    ;
-   
    ```
 
 Custom paths can be include or excluded in this file. For a reference please see: https://github.com/FriendsOfPHP/PHP-CS-Fixer.
