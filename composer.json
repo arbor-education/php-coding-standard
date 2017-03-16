@@ -1,0 +1,12 @@
+{
+  "name": "arbor-education/php-coding-standard",
+  "description": "PHP coding standard ruleset for Arbor Education repositories",
+  "license": "MIT",
+  "keywords": [
+    "arbor education",
+    "coding standard"
+  ],
+  "require": {
+    "friendsofphp/php-cs-fixer": "^2.0"
+  }
+}
