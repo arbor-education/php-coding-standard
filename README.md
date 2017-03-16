@@ -28,7 +28,8 @@ Repository with PHP coding standard ruleset for Arbor Education repositories.
 
 3. Create file `.php_cs` in the root of your repository with following content:
 
-   ```php
+   ```
+   <?php
    $rules = include __DIR__ . '/vendor/arbor-education/php-coding-standard/rules.php';
    
    $finder = PhpCsFixer\Finder::create()
@@ -40,6 +41,7 @@ Repository with PHP coding standard ruleset for Arbor Education repositories.
        ->setRules($rules)
        ->setFinder($finder)
    ;
+   
    ```
 
 Custom paths can be include or excluded in this file. For a reference please see: https://github.com/FriendsOfPHP/PHP-CS-Fixer.
