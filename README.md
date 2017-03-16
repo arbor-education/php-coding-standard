@@ -8,7 +8,7 @@
 
 Repository with PHP coding standard ruleset for Arbor Education repositories.
 
-Coding standards are defined and controlled using [PHP-CS-Fixer][php-cs-fixer] - very popular tool for the purpose and widely used in the PHP ecosystem. Ruleset is based on [PSR-1][psr1] and [PSR-2][psr2] standards, along with few custom rules. Full list of rules can be seen in [ruleset.php][ruleset].
+Coding standards are defined and controlled using [PHP-CS-Fixer][php-cs-fixer] - very popular tool for the purpose and widely used in the PHP ecosystem. Ruleset is based on [PSR-1][psr1] and [PSR-2][psr2] standards, along with few custom rules. Full list of rules can be seen in [rules.php][rules].
 
 
 ## Installation
@@ -67,4 +67,4 @@ Custom paths can be include or excluded in this file. For a reference please see
 [php-cs-fixer]: https://github.com/FriendsOfPHP/PHP-CS-Fixer
 [psr1]: http://www.php-fig.org/psr/psr-1/
 [psr2]: http://www.php-fig.org/psr/psr-2/
-[ruleset]: ruleset.php
+[rules]: rules.php
