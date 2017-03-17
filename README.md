@@ -16,7 +16,7 @@ Coding standards are defined and controlled using [PHP-CS-Fixer][php-cs-fixer] -
 1. Install package via Composer by running:
 
    ```bash
-   $ composer require --dev arbor-education/php-coding-standard
+   $ composer require --dev arbor-education/php-coding-standard:@dev
    ```
    
    **Note that package is loaded from a VCS repository which must be specified in `composer.json`**
