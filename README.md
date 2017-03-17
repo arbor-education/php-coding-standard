@@ -58,6 +58,11 @@ Coding standards are defined and controlled using [PHP-CS-Fixer][php-cs-fixer] -
 
 Custom paths can be include or excluded in this file. For a reference please see [PHP-CS-Fixer documentation][php-cs-fixer].
 
+4. PHP-CS-Fixer creates a cache file that speeds up further fixes. It should be added to `.gitignore`:
+
+    ```
+    .php_cs.cache
+    ```
 
 ## Usage
 
