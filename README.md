@@ -30,16 +30,7 @@ Coding standards are defined and controlled using [PHP-CS-Fixer][php-cs-fixer] -
    ]
    ```
 
-2. Add Composer scripts into your `composer.json`:
-
-   ```json
-   "scripts": {
-     "cs-check": "php-cs-fixer fix --config=.php_cs -v --diff --dry-run",
-     "cs-fix": "php-cs-fixer fix --config=.php_cs"
-   }
-   ```
-
-3. Create file `.php_cs` in the root of your repository with following content:
+2. Create file `.php_cs` in the root of your repository with following content:
 
    ```
    <?php
@@ -56,13 +47,22 @@ Coding standards are defined and controlled using [PHP-CS-Fixer][php-cs-fixer] -
    ;
    ```
 
-Custom paths can be include or excluded in this file. For a reference please see [PHP-CS-Fixer documentation][php-cs-fixer].
+   Custom paths can be include or excluded in this file. For a reference please see [PHP-CS-Fixer documentation][php-cs-fixer].
 
-4. PHP-CS-Fixer creates a cache file that speeds up further fixes. It should be added to `.gitignore`:
+3. PHP-CS-Fixer creates a cache file that speeds up further fixes. It should be added to `.gitignore`:
 
-    ```
-    .php_cs.cache
-    ```
+   ```
+   .php_cs.cache
+   ```
+   
+4. Add Composer scripts into your `composer.json`:
+
+   ```json
+   "scripts": {
+     "cs-check": "php-cs-fixer fix --config=.php_cs -v --diff --dry-run",
+     "cs-fix": "php-cs-fixer fix --config=.php_cs"
+   }
+   ```
 
 ## Usage
 
