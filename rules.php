@@ -7,4 +7,5 @@ return [
     'no_unused_imports' => true,
     'no_whitespace_in_blank_line' => true,
     'standardize_not_equals' => true,
+    'no_extra_consecutive_blank_lines' => ['extra'],
 ];
