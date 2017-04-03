@@ -60,7 +60,8 @@ Coding standards are defined and controlled using [PHP-CS-Fixer][php-cs-fixer] -
    ```json
    "scripts": {
      "cs-check": "php-cs-fixer fix --config=.php_cs -v --diff --dry-run",
-     "cs-fix": "php-cs-fixer fix --config=.php_cs"
+     "cs-fix": "php-cs-fixer fix --config=.php_cs",
+     "ci-cs": "git fetch; diff_files=`git diff --name-only --diff-filter=d origin/master | xargs`; for x in ${diff_files}; do php-cs-fixer fix --config=.php_cs -v --dry-run --using-cache=no ${x}; done"
    }
    ```
 
@@ -78,6 +79,11 @@ Coding standards are defined and controlled using [PHP-CS-Fixer][php-cs-fixer] -
   $ composer cs-fix
   ```
 
+* To control CS violations in your Continuous Integration process:
+ 
+  ```bash
+  $ composer ci-cs
+  ```
 
 
 [php-cs-fixer]: https://github.com/FriendsOfPHP/PHP-CS-Fixer
