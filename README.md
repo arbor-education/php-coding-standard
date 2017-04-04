@@ -36,7 +36,11 @@ Coding standards are defined and controlled using [PHP-CS-Fixer][php-cs-fixer] -
    <?php
    $rules = require __DIR__ . '/vendor/arbor-education/php-coding-standard/rules.php';
    
-   $finder = PhpCsFixer\Finder::create()
+   $finder = Symfony\Component\Finder\Finder::create()
+       ->files()
+       ->name('*.php')
+       ->ignoreDotFiles(true)
+       ->ignoreVCS(true)
        ->in(__DIR__)
        ->exclude('vendor')
    ;
@@ -47,7 +51,7 @@ Coding standards are defined and controlled using [PHP-CS-Fixer][php-cs-fixer] -
    ;
    ```
 
-   Custom paths can be include or excluded in this file. For a reference please see [PHP-CS-Fixer documentation][php-cs-fixer].
+   Custom paths can be included/excluded in this file. For a reference please see [PHP-CS-Fixer documentation][php-cs-fixer].
 
 3. PHP-CS-Fixer creates a cache file that speeds up further fixes. It should be added to `.gitignore`:
 
