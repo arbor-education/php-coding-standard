@@ -89,8 +89,18 @@ Coding standards are defined and controlled using [PHP-CS-Fixer][php-cs-fixer] -
   $ composer ci-cs
   ```
 
+## IDE integration
+
+If you are using PhpStorm, you can easily make it automatically fix coding standard violations as you are modifying files, by adding new external tool:
+
+![PhpStorm CS Fixer][img-php-storm-cs-fixer]
+
+Notice that relative paths are used when referencing PHP-CS-Fixer binary because it is installed as a dev dependency.
+
+
 
 [php-cs-fixer]: https://github.com/FriendsOfPHP/PHP-CS-Fixer
 [psr1]: http://www.php-fig.org/psr/psr-1/
 [psr2]: http://www.php-fig.org/psr/psr-2/
 [rules]: rules.php
+[img-php-storm-cs-fixer]: php-storm-cs-fixer.png
