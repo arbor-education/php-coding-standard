@@ -6,9 +6,7 @@
 
 # PHP Coding Standard
 
-Set of coding standard rules for [PHP-CS-Fixer][php-cs-fixer] that applies to all Arbor Education PHP-based projects.
-
-Ruleset is based on [PSR-1][psr1] and [PSR-2][psr2] standards, along with few custom rules. Full list of rules can be seen in [rules.php][rules].
+Set of coding standard rules for [PHP-CS-Fixer][php-cs-fixer] that applies to all Arbor Education PHP-based projects. Ruleset is based on [PSR-1][psr1] and [PSR-2][psr2] standards, along with few custom rules. Full list of rules can be seen in [rules.php][rules].
 
 
 ## Installation
