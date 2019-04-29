@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="http://arbor-education.com/assets/theme/img/arbor_circles.png" alt="Arbor" width="200px" />
+  <img src="https://arbor-education.com/wp-content/themes/arbor/images/arbor-education-logo.svg" alt="Arbor" width="200px" />
 </p>
 
 ---
