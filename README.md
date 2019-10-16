@@ -16,9 +16,9 @@ Set of coding standard rules for [PHP-CS-Fixer][php-cs-fixer] that applies to al
    ```bash
    $ composer require --dev arbor-education/php-coding-standard:@dev
    ```
-   
+
    **Note that package is loaded from a VCS repository which must be specified in `composer.json`**
-   
+
    ```json
    "repositories": [
        {
@@ -33,7 +33,7 @@ Set of coding standard rules for [PHP-CS-Fixer][php-cs-fixer] that applies to al
    ```
    <?php
    $rules = require __DIR__ . '/vendor/arbor-education/php-coding-standard/rules.php';
-   
+
    $finder = Symfony\Component\Finder\Finder::create()
        ->files()
        ->name('*.php')
@@ -42,7 +42,7 @@ Set of coding standard rules for [PHP-CS-Fixer][php-cs-fixer] that applies to al
        ->in(__DIR__)
        ->exclude('vendor')
    ;
-   
+
    return PhpCsFixer\Config::create()
        ->setRules($rules)
        ->setFinder($finder)
@@ -56,14 +56,20 @@ Set of coding standard rules for [PHP-CS-Fixer][php-cs-fixer] that applies to al
    ```
    .php_cs.cache
    ```
-   
+
 4. Add Composer scripts into your `composer.json`:
 
    ```json
    "scripts": {
-     "cs-check": "php-cs-fixer fix --config=.php_cs -v --diff --dry-run",
-     "cs-fix": "php-cs-fixer fix --config=.php_cs",
-     "ci-cs": "git fetch; php-cs-fixer fix --config=.php_cs -v --dry-run --using-cache=no --path-mode=intersection `git diff --name-only --diff-filter=d origin/master | xargs`"
+     "diff-files": "f() { git diff --name-only --diff-filter=ACMRTUXB $1 | grep -i \\.php$ | grep -vi resources/ ; }; f",
+     "cs": "f() { if test \"$1\" ; then vendor/bin/php-cs-fixer fix --dry-run --config=.php_cs -v --using-cache=no --diff --diff-format=udiff --ansi $1 ; else echo \"Nothing to fix\" ; fi ; }; f",
+     "cs-fix": "f() { if test \"$1\" ; then vendor/bin/php-cs-fixer fix --config=.php_cs -v --using-cache=no --diff --diff-format=udiff --ansi $1 ;  else echo \"Nothing to fix\" ; fi ; }; f",
+     "cs-feature": "composer cs -- \"$(composer diff-files origin/develop)\"",
+     "cs-fix-feature": "composer cs-fix -- \"$(composer diff-files origin/develop)\"",
+     "cs-changes": "composer cs -- \"$(composer diff-files HEAD)\"",
+     "cs-fix-changes": "composer cs-fix -- \"$(composer diff-files HEAD)\"",
+     "ci-cs-pr": "composer cs-fix-feature",
+     "cs-cs": "composer cs-fix -- \"$(composer diff-files origin/master)\""
    }
    ```
 
@@ -76,13 +82,13 @@ Set of coding standard rules for [PHP-CS-Fixer][php-cs-fixer] that applies to al
   ```
 
 * To automatically fix CS issues:
- 
+
   ```bash
   $ composer cs-fix
   ```
 
 * To control CS violations in your Continuous Integration process:
- 
+
   ```bash
   $ composer ci-cs
   ```
