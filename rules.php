@@ -6,5 +6,5 @@ return [
     'object_operator_without_whitespace' => true,
     'no_whitespace_in_blank_line' => true,
     'standardize_not_equals' => true,
-    'no_extra_blank_lines' => ['tokens' => ['extra']],
+    'no_extra_consecutive_blank_lines' => ['extra'],
 ];

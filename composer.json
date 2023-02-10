@@ -7,6 +7,6 @@
     "coding standard"
   ],
   "require": {
-    "friendsofphp/php-cs-fixer": "^3.0"
+    "friendsofphp/php-cs-fixer": "^2.18.3"
   }
 }
