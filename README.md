@@ -13,8 +13,13 @@ Set of coding standard rules for [PHP-CS-Fixer][php-cs-fixer] that applies to al
 
 1. Install package via Composer by running:
 
+    For PHP 7.x use version 1:
    ```bash
-   $ composer require --dev arbor-education/php-coding-standard:@dev
+   $ composer require --dev arbor-education/php-coding-standard:^1.0
+   ```
+   For PHP 8.x use version 2:
+   ```bash
+   $ composer require --dev arbor-education/php-coding-standard:^2.0
    ```
    
    **Note that package is loaded from a VCS repository which must be specified in `composer.json`**
