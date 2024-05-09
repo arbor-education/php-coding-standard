@@ -37,7 +37,6 @@ return [
     'trim_array_spaces' => true,
 
     // GENERAL FORMATTING
-    'blank_line_after_opening_tag' => true,
     'object_operator_without_whitespace' => true,
     'no_whitespace_in_blank_line' => true,
     'standardize_not_equals' => true,
