@@ -4,7 +4,6 @@ return [
     '@PSR2' => true,
 
     // PHPDOC
-    'general_phpdoc_annotation_remove' => ['annotations' => ['author', 'package', 'group']],
     'no_empty_phpdoc' => true,
     'no_superfluous_phpdoc_tags' => true,
 
@@ -41,10 +40,4 @@ return [
     'no_whitespace_in_blank_line' => true,
     'standardize_not_equals' => true,
     'no_extra_blank_lines' => ['tokens' => ['extra']],
-
-    // POTENTIALLY DANGEROUS! These rules can change semantics of existing code!
-    // Replace non multibyte-safe functions with corresponding mb function.
-    'mb_str_functions' => true,
-    // Force strict types declaration in all files. Requires PHP >= 7.0.
-    'declare_strict_types' => true,
 ];
