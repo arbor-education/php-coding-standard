@@ -2,4 +2,4 @@
 # Each line is a file pattern followed by one or more owners.
 # Order is important. The last matching pattern has the most precedence.
 
-* damian.brooks@arbor-education.com igor.vuckovic@arbor-education.com robert.tweed@arbor-education.com nemanja.andrejevic@arbor-education.com
+* @arbor-education/chapter-atlas
