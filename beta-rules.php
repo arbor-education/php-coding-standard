@@ -6,6 +6,7 @@ return [
     // PHPDOC
     'no_empty_phpdoc' => true,
     'no_superfluous_phpdoc_tags' => true,
+    'php_unit_test_class_requires_covers' => true,
 
     // CASTING
     // A single space should be between cast and variable.
