@@ -13,8 +13,6 @@ return [
     'cast_spaces' => ['space' => 'single'],
     // @PSR12, cast should be written in lower case.
     'lowercase_cast' => true,
-    // Replaces intval, floatval, doubleval, strval and boolval function calls with respective type casting operator.
-    'modernize_types_casting' => true,
     //Short cast bool using double exclamation mark should not be used.
     'no_short_bool_cast' => true,
     // Variables must be set null instead of using (unset) casting.
