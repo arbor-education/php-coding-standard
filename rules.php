@@ -14,4 +14,7 @@ return [
     'no_whitespace_in_blank_line' => true,
     'standardize_not_equals' => true,
     'no_extra_blank_lines' => ['tokens' => ['extra']],
+
+    // PHPDOC
+    'php_unit_test_class_requires_covers' => true,
 ];
