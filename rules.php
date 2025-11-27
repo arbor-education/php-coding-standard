@@ -5,7 +5,10 @@ return [
     '@PSR12' => true,
 
     // IMPORTS
-    'ordered_imports' => ['sort_algorithm' => 'alpha'],
+    'ordered_imports' => [
+        'sort_algorithm' => 'alpha', //stricter PSR12 requirements
+        'imports_order' => ['class', 'function', 'const'] //PSR12
+    ],
 
     // CASTING
     // A single space should be between cast and variable.
