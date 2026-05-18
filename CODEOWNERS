@@ -3,3 +3,4 @@
 # Order is important. The last matching pattern has the most precedence.
 
 * @arbor-education/chapter-atlas
+.snyk @arbor-education/platform-security
