@@ -1,6 +1,22 @@
 repos:
-  - repo: https://github.com/arbor-education/gha.workflows
-    rev: v2.0.51
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.2.0
     hooks:
-      - id: arbor-standard
+      - id: check-merge-conflict
+      - id: trailing-whitespace
+        exclude: '\.github/actions/.*/dist/.*'
+      - id: end-of-file-fixer
+        exclude: '\.github/actions/.*/dist/.*'
+      - id: check-json
+      - id: check-added-large-files
+      - id: check-yaml
+
+  - repo: local
+    hooks:
       - id: trufflehog
+        name: TruffleHog
+        description: Detect secrets using TruffleHog.
+        entry: bash -c 'if ! command -v trufflehog &>/dev/null; then echo "ERROR: trufflehog is not installed."; echo "Install it via: curl -sSfL https://raw.githubusercontent.com/trufflesecurity/trufflehog/main/scripts/install.sh | sh -s -- -b /usr/local/bin"; exit 1; fi; trufflehog git file://. --since-commit HEAD --results=verified --fail --no-update'
+        language: system
+        pass_filenames: false
+        stages: ["pre-commit", "pre-push"]
