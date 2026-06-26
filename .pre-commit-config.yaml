@@ -1,10 +1,17 @@
 repos:
-  - repo: local
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.2.0
+    hooks:
+      - id: check-merge-conflict
+      - id: trailing-whitespace
+        exclude: '\.github/actions/.*/dist/.*'
+      - id: end-of-file-fixer
+        exclude: '\.github/actions/.*/dist/.*'
+      - id: check-json
+      - id: check-added-large-files
+      - id: check-yaml
+
+  - repo: https://github.com/arbor-education/gha.workflows
+    rev: c593aa60a9207ddc5c553561f9580b25d88fe5bc
     hooks:
       - id: trufflehog
-        name: TruffleHog
-        description: Detect secrets using TruffleHog.
-        entry: bash -c 'trufflehog git file://. --since-commit HEAD --results=verified --fail --no-update'
-        language: system
-        pass_filenames: false
-        stages: ["pre-commit", "pre-push"]
