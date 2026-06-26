@@ -1,6 +1,6 @@
 repos:
   - repo: https://github.com/arbor-education/gha.workflows
-    rev: 444cca24015f1cfcb80de1d6deb881a5ae58e30d
+    rev: v2.0.51
     hooks:
       - id: arbor-standard
       - id: trufflehog
