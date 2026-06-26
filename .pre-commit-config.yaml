@@ -1,3 +1,10 @@
 repos:
-  - repo: arbor-education/gha.workflows/.github/workflows/pre-commit-template.yaml
-    rev: v0.0.168
+  - repo: local
+    hooks:
+      - id: trufflehog
+        name: TruffleHog
+        description: Detect secrets using TruffleHog.
+        entry: bash -c 'trufflehog git file://. --since-commit HEAD --results=verified --fail --no-update'
+        language: system
+        pass_filenames: false
+        stages: ["pre-commit", "pre-push"]
